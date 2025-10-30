@@ -1,0 +1,6 @@
+# requirements.txt
+# Manifest file for QR Code Generator project
+# Lists external Python libraries required to run this program.
+
+qrcode[pil]==7.4.2
+Pillow>=9.0.0
