@@ -29,7 +29,7 @@ def ensure_png_suffix(path: Path) -> Path:
 def generate_qr(
           url: str,
           out_path: Path,
-          error_corection: str ="M",
+          error_correction: str ="M",
           box_size: int =20,
           border: int = 4,
           fill_color: str = "black",
@@ -38,7 +38,7 @@ def generate_qr(
      if not is_valid_url(url):  # Check if the URL  is valid - if not the program stops and warns the user.
           raise ValueError(f"Invalid URL: '{url}'")
      
-     if error_corection not in EC_MAP:  # Make sure the user picked a valid error correction level (L/M/Q/H).
+     if error_correction not in EC_MAP:  # Make sure the user picked a valid error correction level (L/M/Q/H).
           raise ValueError(f"error-correction must be one of {list(EC_MAP.keys())}")
      
      out_path = ensure_png_suffix(out_path) # Ensure the folder (like out/) exists before saving the image.
@@ -47,7 +47,7 @@ def generate_qr(
      # Creating QR object:
      qr = qrcode.QRCode(
           version = None,
-          error_correction= EC_MAP[error_corection],
+          error_correction= EC_MAP[error_correction],
           box_size= box_size,
           border= border,)
      
@@ -85,7 +85,7 @@ def main() -> int:
           out_path = generate_qr(
                url= args.url,
                out_path= Path(args.out),
-               error_corection= args.ec,
+               error_correction= args.ec,
                box_size= args.box_size,
                border= args.border,
                fill_color= args.fill,
