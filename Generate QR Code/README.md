@@ -18,6 +18,6 @@
 | `--back`     | (Optional) Background color                              | `white`               |
 
 # RUN WITH GUI (TKINTER MODE)
-* You must save qr_generator.py and qr_generator_gui.py in same folfer.
+* You must save qr_generator.py and qr_generator_gui.py in same folder.
 * In the project folder saving qr_generator_gui.py file.
 * In CLI, Command: `python qr_generator_gui.py`
