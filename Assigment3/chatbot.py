@@ -1,5 +1,3 @@
-# chat_client/chatbot.py
-
 """
 Terminal-based chatbot client using Django and ChatterBot.
 
