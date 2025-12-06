@@ -1,0 +1,88 @@
+Project Title: Fraud Detection Model using AutoEncoder (PyOD)
+
+------------------------------------------------------------
+A. Project Description
+------------------------------------------------------------
+This project implements a fraud detection system using the AutoEncoder 
+model from the PyOD library. The model detects anomalies based on 
+reconstruction errors and is applied to a synthetic credit card 
+transaction dataset that mimics the Kaggle Credit Card Fraud dataset.
+
+The system loads the data, preprocesses it, trains the AutoEncoder, 
+evaluates performance (confusion matrix, classification report, 
+ROC-AUC), and visualizes anomaly scores.
+
+------------------------------------------------------------
+B. Files Included
+------------------------------------------------------------
+1. fround_autoencoder.py
+   - Main Python script for loading data, training AutoEncoder, 
+     and evaluating results.
+
+2. creditcard.csv
+   - Kaggle's dataset.
+
+3. manifest.txt
+   - This documentation file.
+
+4. anomaly_scores_hist.png (optional)
+   - Plot showing anomaly score distribution (saved if enabled).
+
+------------------------------------------------------------
+C. Environment and Python Version
+------------------------------------------------------------
+Python Version: Python 3.11
+Operating System: Windows 11
+Recommended IDE: Visual Studio Code
+
+------------------------------------------------------------
+D. Required Python Libraries
+------------------------------------------------------------
+Install dependencies using:
+
+pip install pyod pandas scikit-learn matplotlib tqdm
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+Libraries used:
+- pyod
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
+- torch (CPU version)
+- tqdm
+
+
+------------------------------------------------------------
+E. How to Run the Fraud Detection Script
+------------------------------------------------------------
+To execute the AutoEncoder model:
+
+python fround_autoencoder.py
+
+Or specify dataset path manually:
+
+python fround_autoencoder.py --data_path creditcard.csv
+
+Output includes:
+- Dataset summary
+- Training progress
+- Confusion matrix
+- Classification report
+- ROC-AUC score
+- Anomaly score histogram
+
+------------------------------------------------------------
+F. Expected Output for Submission
+------------------------------------------------------------
+You should screenshot the following and include in the Word document:
+1. Terminal output showing:
+   - Dataset shape and fraud ratio
+   - Confusion matrix
+   - Classification report
+   - ROC-AUC score
+2. Plot of anomaly score distribution
+
+
+
+
